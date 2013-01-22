@@ -7,30 +7,28 @@
 
 from math import pi
 
+def newFloat(inputString):
+    tempInput = input([inputString + "; or 'quit' to quit program"])
+    if(tempInput=="quit"):
+        quit()
+    try:
+        float(tempInput)
+    except:
+        print("Input is not a number. Utilizing default value of 10")
+        return 10
+    else:
+        tempInput = float(tempInput)
+        return tempInput
 
 # main
 
 while(True):
 
     #get user input radius
-    rInput = input(["Input radius of cylinder in units, or 'quit' to quit"])
-    if(rInput=="quit"):
-        quit()
-    try:
-        float(rInput)
-    except:
-        print("Please input a number \n")
-        continue
-    radius=float(rInput)
-
+    radius = newFloat("Input radius of cylinder in units")
+    
     #get user input length
-    lInput=input(["Input length of cylinder in units"])
-    try:
-        float(lInput)
-    except:
-        print("Please input a number \n")
-        continue
-    length=float(lInput)
+    length = newFloat("Input length of cylinder in units")
 
     #calculate volume
     area = radius**2 * pi
