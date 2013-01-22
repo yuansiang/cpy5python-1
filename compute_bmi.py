@@ -1,7 +1,7 @@
 # Filename: compute_bmi.py
 # Author: Justin Leow
 # Created: 21/1/2013
-# Modified: 21/1/2013
+# Modified: 22/1/2013
 # Description: Program to get user weight and height and calculate body mass
 
 # main
@@ -9,8 +9,13 @@
 while(True):
 
 # get user mass and weight input
-    mass = float(input(["Input mass / kg"]))
-    height = float(input(["input height / m"]))
+    mass = input(["Input mass / kg, or type 'quit'"])
+    if(mass=="quit"):
+        quit()
+    mass=float(mass)
+    height = float(input(["input height / cm or m"]))
+    if(height>100):
+        height/=100 
 
 # calculate bmi
     bmi = mass/(height**2)
