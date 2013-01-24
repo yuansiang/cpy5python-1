@@ -1,7 +1,7 @@
 # Filename: q4_sum_digits.py
 # Author: Justin Leow
-# Created: 22/1/2013
-# Modified: 22/1/2013
+# Created: 24/1/2013
+# Modified: 24/1/2013
 # Description: reads an integer between 0 and 1000 and adds all the digits in the integer.
 
 def newString(inputString):

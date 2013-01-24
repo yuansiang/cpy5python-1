@@ -1,7 +1,7 @@
 # Filename: q3_miles_to_kilometre.py
 # Author: Justin Leow
-# Created: 22/1/2013
-# Modified: 22/1/2013
+# Created: 24/1/2013
+# Modified: 24/1/2013
 # Description: reads a number in miles, converts it to kilometres, and displays the result. One mile is 1.60934 kilometres. Display your answer correct to 3 decimal places.
 
 def newFloat(inputString):
