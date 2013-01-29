@@ -38,4 +38,4 @@ while(True):
     if(tri[0]+tri[1]<=tri[2]):
         print("Invalid triangle!\n")
     else:
-        print("Perimeter = "+str(tri[0]+tri[1]+tri[2])+"\n")
+        print("Perimeter = {0:0.2f}".format(tri[0]+tri[1]+tri[2])+"\n")

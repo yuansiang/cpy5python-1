@@ -2,9 +2,7 @@
 # Author: Justin Leow
 # Created: 29/1/2013
 # Modified: 29/1/2013
-# Description: Write a program that reads three edges for a triangle and determines whether the input is valid.
-#              The input is valid if the sum of any two edges is greater than the third edge.
-#              The program will compute the perimeter of the triangle if the input is valid. Otherwise, display that the input is invalid.
+# Description: A program that prompts the user to enter a score between 0 and 100 inclusive, then gives him his grade.
 
 def newFloat(inputString):
     tempInput = input(inputString)
@@ -17,25 +15,29 @@ def newFloat(inputString):
         return 10
     else:
         tempInput = float(tempInput)
-        return tempInput
+        if(0<=tempInput<=100):
+            return tempInput
+        else:
+            print("Invalid! Score must be within 0 - 100.")
 
 # main
 
 print("\ntype 'quit' to quit program at anytime.\n")
 
-tri=[0,0,0]
+looping = True
 
 while(True):
 
     #get user input
-    tri[0] = newFloat("Enter side 1: ")
-    tri[1] = newFloat("Enter side 2: ")
-    tri[2] = newFloat("Enter side 3: ")
+    userInput = newFloat("Enter score: ")
     
+    grades = ["EXCELLENT FULL COMBO SSS","A","B","C","D","E","S","U"]
+    gradeScore = [100,70,60,55,50,45,35,0]
+    gradeArr = [grades,gradeScore]
     
-    #calculate
-    tri.sort()
-    if(tri[0]+tri[1]<=tri[2]):
-        print("Invalid triangle!\n")
+    if(userInput==gradeArr[1][0]):
+        print(gradeArr[0][0]+"\n")
     else:
-        print("Perimeter = "+str(tri[0]+tri[1]+tri[2])+"\n")
+        for i in range(1,len(gradeScore)):
+            if(gradeArr[1][i-1]>userInput>=gradeArr[1][i]):
+                print(gradeArr[0][i]+"\n")
