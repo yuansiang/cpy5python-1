@@ -11,7 +11,7 @@ def newFloat(inputString):
     try:
         float(tempInput)
     except:
-        print("Input is not an integer. Utilizing default value of 10")
+        print("Input is not a number. Utilizing default value of 10")
         return 10
     else:
         tempInput = float(tempInput)
