@@ -17,6 +17,6 @@ print("Miles Kilometers Kilometres Miles")
 
 w=20
 
-for i in range(10):
+for i in range(1,11):
     print("{0:<6}{1:<11.3f}{2:<11}{3:.3f}".format(i,milesToKm(i),w,kmToMiles(w)))
     w+=5

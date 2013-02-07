@@ -13,5 +13,5 @@ print("\ntype 'quit' to quit program at anytime.\n")
 
 print("Kilograms Pounds")
 
-for i in range(10):
+for i in range(1,11):
     print("{0:<10}{1:.1f}".format(i,kiloToPound(i)))
