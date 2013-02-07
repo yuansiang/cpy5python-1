@@ -25,23 +25,23 @@ print("\ntype 'quit' to quit program at anytime.\n")
 while(True):
 
     #get user input
-    n1 = newInt("Enter First Number: ")
-    n2 = newInt("Enter Second Number: ")
+    userNum = newInt("Enter Integer: ")
+    num = userNum
     
-    #calculate
-    if(n1>n2):
-        d = n2
-    else:
-        d = n1
+    #initialize array which stores all factors
+    factorsArr = []
     
-    #check n1
-    gcdfound = False
-    while(gcdfound==False):
-        if(n1%d==0 and n2%d==0):
-            gcdfound = True
+    completed = False
+    divisor = 2
+    
+    #test divide
+    while(num>=divisor):
+        if(num%divisor==0):
+            factorsArr.append(divisor)
+            num = num / divisor
         else:
-            d = d-1
+            divisor = divisor + 1
     
     #output
-    print("The greatest common divisor is : "+str(d))
+    print(factorsArr)
     
