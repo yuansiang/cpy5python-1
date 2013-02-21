@@ -5,14 +5,14 @@
 # Description: Displays a pattern from 1 to n
 
 def newInt(inputString):
-    tempInput = input([inputString + "; or 'quit' to quit program"])
+    tempInput = input(inputString)
     if(tempInput=="quit"):
         quit()
     try:
         int(tempInput)
     except:
         print("Input is not an integer. Utilizing default value of 10")
-        return "10"
+        return 10
     return int(tempInput)
 
 def displayPattern(n):
@@ -29,6 +29,8 @@ def displayPattern(n):
         print("{0:>s}".format(("".join(myList[::-1]))).rjust(length))
     
 # main
+
+print("\ntype 'quit' to quit program at anytime.\n")
 
 while(True):
 
