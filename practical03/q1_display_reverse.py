@@ -22,5 +22,5 @@ while(True):
     #get user input
     myNumber = str(newString("Input a positive integer"))
     
-    print (myNumber[::-1])
+    print (int(myNumber[::-1]))
         
