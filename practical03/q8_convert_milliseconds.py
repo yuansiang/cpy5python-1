@@ -4,6 +4,18 @@
 # Modified: 21/2/2013
 # Description: displays an n by n matrix, with elements generated randomly between 0 and 1
 
+##Input a positive integer: 5500
+##0:0:5
+##
+##Input a positive integer: 100000
+##0:1:40
+##
+##Input a positive integer: 555550000
+##154:19:10
+##
+##Input a positive integer: 3252362472
+##903:26:2
+
 import random
 
 def newInt(inputString):
@@ -15,7 +27,12 @@ def newInt(inputString):
     except:
         print("Input is not an integer. Utilizing default value of 555550000")
         return 555550000
-    return int(tempInput)
+    tempInput = int(tempInput)
+    if(tempInput < 0):
+        print("Input is not positive. Utilizing positive")
+        return tempInput * (-1)
+    else:
+        return tempInput
 
 # main
 

@@ -4,6 +4,9 @@
 # Modified: 19/2/2013
 # Description: returns the greatest common divisor between two positive integers
 
+##The greatest common divisor of 16 and 24 is 8
+##The greatest common divisor of 255 and 25 is 5
+
 # main
 
 def gcd(n1,n2):

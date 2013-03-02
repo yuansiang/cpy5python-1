@@ -4,6 +4,23 @@
 # Modified: 21/2/2013
 # Description: displays an n by n matrix, with elements generated randomly between 0 and 1
 
+##Input a positive integer: 3
+##1 0 1 
+##0 1 1 
+##0 1 1 
+##
+##Input a positive integer: 10
+##1 1 0 1 0 1 1 0 0 1 
+##0 1 1 0 1 0 1 1 0 0 
+##0 1 0 1 0 1 0 0 1 0 
+##0 1 0 0 1 1 0 1 0 1 
+##1 0 1 1 0 0 1 1 0 1 
+##0 0 1 1 1 0 1 1 0 1 
+##0 1 0 1 1 1 0 0 0 1 
+##0 0 1 0 0 0 0 0 0 0 
+##1 1 1 0 1 1 0 1 1 1 
+##1 0 1 0 1 1 0 0 0 1 
+
 import random
 
 def newInt(inputString):
@@ -15,7 +32,12 @@ def newInt(inputString):
     except:
         print("Input is not an integer. Utilizing default value of 3")
         return 3
-    return int(tempInput)
+    tempInput = int(tempInput)
+    if(tempInput < 0):
+        print("Input is not positive. Utilizing default value of 3")
+        return 3
+    else:
+        return int(tempInput)
 
 # main
 
