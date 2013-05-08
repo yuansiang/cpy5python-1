@@ -23,7 +23,7 @@ class Staff():
 		return self.__salary
 		
 	def generate_payroll(self,month):
-		print("Staff ID:",self.get_staff_id())
+		print("Staff:",self.get_staff_id())
 		print("Name:",self.get_name())
 		print("Salary:",self.compute_salary(month))
 		print("\n")
@@ -36,11 +36,11 @@ class FulltimeStaff(Staff):
 	def compute_salary(self,month):
 		salary = self.get_salary()
 		if month == "June":
-			return salary * 1.5
+			return "{0:.2f}".format(salary * 1.5)
 		elif month == "December":
-			return salary * 2
+			return "{0:.2f}".format(salary * 2)
 		else:
-			return salary
+			return "{0:.2f}".format(salary)
 	
 class ParttimeStaff(Staff):
 	
@@ -63,7 +63,7 @@ class ParttimeStaff(Staff):
 		
 	def compute_salary(self,month):
 		salary = self.get_daily_rate() * self.get_work_days()
-		return salary
+		return "{0:.2f}".format(salary)
 		
 
 	
